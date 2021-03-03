@@ -9,6 +9,11 @@ public class MoveCandies : MonoBehaviour
     private Vector3 candyPos;
     private float speedToBox = 5f;
     private bool isMoveToBox;
+    private Collider _collider;
+    
+    private void Start() {
+        _collider = GetComponent<Collider>();
+    }
 
     void OnMouseDown() {
         candyPos = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f)); 
@@ -25,7 +30,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy1") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(0.666f, 0.187f, -0.236f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -33,7 +38,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy2") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(0.5422592f, 0.16f, -0.57f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -41,7 +46,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy3") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(0.16f, 0.19f, -0.3f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -49,7 +54,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy4") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(-0.2f, 0.1f, -0.31f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -57,7 +62,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy5") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(-0.5f, 0.19f, -0.47f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -65,7 +70,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy6") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(-0.62f, 0.158f, -0.131f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -73,7 +78,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy7") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(0.28f, 0.19f, 0.21f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
@@ -81,7 +86,7 @@ public class MoveCandies : MonoBehaviour
                 if(other.tag == "Candy8") {
                     isMoveToBox = true;
                     StartCoroutine(MoveToBox(new Vector3(-0.186f, 0.09f, 0.304f)));
-                    GetComponent<Collider>().enabled = false;
+                    _collider.enabled = false;
                     StartCoroutine(Next());
                 }
             break;
