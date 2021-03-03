@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveCandies : MonoBehaviour
 {
-    [HideInInspector]
     public static int count;
     public GameObject nextText;
     private Vector3 candyPos;
