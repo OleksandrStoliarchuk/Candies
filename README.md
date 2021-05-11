@@ -1,3 +1,3 @@
-# Candies(test work)
+# Candies
 "Candies"
 One level
